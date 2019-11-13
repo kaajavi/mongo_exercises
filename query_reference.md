@@ -69,3 +69,28 @@ If you need remove _id field, setting **_id** to 0:
  > `db.films.find({Rating: {$in:["G","PG"]}} , {Title:1, _id:0} )`
 
 
+## AGREGATIONS
+When you need write an aggregation in mongo db, you need make an query called "pipeline".  
+
+###Pipeline Concept
+
+In UNIX command, shell pipeline means the possibility to execute an operation on some input and use the output as the input for the next command and so on. MongoDB also supports same concept in aggregation framework. There is a set of possible stages and each of those is taken as a set of documents as an input and produces a resulting set of documents (or the final resulting JSON document at the end of the pipeline). This can then in turn be used for the next stage and so on.
+
+Following are the possible stages in aggregation framework −
+
+* __$project__ − Used to select some specific fields from a collection.
+
+* __$match__ − This is a filtering operation and thus this can reduce the amount of documents that are given as input to the next stage.
+
+* __$group__ − This does the actual aggregation as discussed above.
+
+* __$sort__ − Sorts the documents.
+
+* __$skip__ − With this, it is possible to skip forward in the list of documents for a given amount of documents.
+
+* __$limit__ − This limits the amount of documents to look at, by the given number starting from the current positions.
+
+* __$unwind__ − This is used to unwind document that are using arrays. When using an array, the data is kind of pre-joined and this operation will be undone with this to have individual documents again. Thus with this stage we will increase the amount of documents for the next stage.
+
+### Example
+
