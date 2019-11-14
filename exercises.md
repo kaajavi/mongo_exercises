@@ -27,9 +27,6 @@ db.movies.find({directors:"Auguste Lumière"})
 
 1. _Find all comments of movie called "Pauvre Pierrot"._
 
-1. _Find all comments of movie called "The Story of the Kelly Gang".
-Returns only the name of user_
-
 1. _Look for movies from the first half of the 19th century_
 
 1. _Find the oldest movie_
@@ -71,6 +68,9 @@ Example
 1. _Find the name of the person who make more comments._
 
 1. _Find the number of movies from the second half of the 19th century_
+
+1. _Find all comments of movie called "The Story of the Kelly Gang".
+Returns only the name of user_
 
 
 
